@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rock  Paper  Scissors!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>Rock,  Paper,  Scissors!</h1>
+        </header>
+        <br>
+        
+        <div class="mainContent">
+
+            <div id="left-area">
+                <p id="userchoice-text"></p>
+                <p id="computerchoice-text"></p>
+            </div>
+
+             <img src="assets/images/001_Rock_Paper_Scissors.png"></img>
+            
+            <div id="right-area">
+                <p id="wins-text"></p>
+                <p id="losses-text"></p>
+                <p id="ties-text"></p>
+            </div>
+            
+        </div>
+        <br>
+
+        <div class="directions-text">
+            <h2>Press the "R", "P", or "S" key to choose.</h2>
+        </div>
+        <br><br><br>
+        
+        <div>
+            <footer>copyright</footer>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+
+        // Array of Choices
+        var computerChoices = ["r", "p", "s"];
+
+        // Hold Stats
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;
+
+        // Reference Placement of Choices and Stats
+
+        var directionsText = document.getElementById("directions-text");
+        var userChoiceText = document.getElementById("userchoice-text");
+        var computerChoiceText = document.getElementById("computerchoice-text");
+
+        // Runs when key is pressed
+        document.onkeyup = function(event) {
+
+            // Determines which key
+            var userGuess = event.key;
+            
+            
+            // Computer chooses random option from array
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+            // Run code block only if "r", "p", or "s" is clicked
+            if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
+
+                userChoiceText.textContent = "You chose: " + userGuess;
+                computerChoiceText.textContent = "Computer chose: " + computerGuess;
+            }
+        b};
+    </script> 
+</body>
+</html>
