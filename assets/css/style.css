@@ -1,55 +1,22 @@
 body {
     background: url("../images/legal-pad-979558_1920.png");
-    text-align: center;
 }
 
-h1 {
-    font-family: "Times New Roman";
-    font-size: 37px;
-    color: #FFFACD;
-    padding: 15px;
-}
-
-.mainContent {
-    overflow: auto;
-    margin-top: 30px;
-    border: solid;
-    border-width: 2px;
-}
-
-#left-area, #right-area {
-    width: 18%;
-    height: 3in;
-    font-size: 20px;
-    line-height: 20px;
+.h1 {
     font-family: "Courier New";
-    text-align: right;
-    padding:15px;
+    font-size: 40px;
+    color: #FFFACD;
 }
 
-#left-area {
-    float: left;
+p {
+    font-size: 20px;
+    line-height: 10px;
+    font-family: "Courier New";
 }
 
-#right-area {
-    float:right;
+.img-fluid {
+    max-width: 50%;
+    height:auto;
 }
 
-img {
-    float: center;
-    width: auto;
-    height: 3.2in;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.directions-text {
-    clear: all;
-    border: solid;
-    border-width: 2px;
-}
-
-footer {
-    background-color:#459777;
-    padding: 30px;
-}
+footer { background-color:#459777; }
