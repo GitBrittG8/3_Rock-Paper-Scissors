@@ -5,32 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Rock  Paper  Scissors!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 
 <body>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-
-        <div class="row">
-          <div class="page-header">
-              <h1>Rock, Paper, Scissors!</h1>
+  <div class="container-fluid">
+    
+        <div class="row head">
+          <div class="col-sm-12 pt-5">
+            <h1>Rock, Paper, Scissors!</h1>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-sm-3">
+        <div class="row spacing">
+          <div class="col-sm-12"></div>
+        </div>
+
+        <div class="row instructions-text">
+          <div class="col-sm-12">
             <p id="directions-text">Press r, p or s to start playing!</p>
+          </div>
+        </div>
+
+        <div class="row stats-area">
+          <div class="col-sm-3">
+            <br>
             <p id="userchoice-text"></p>
+            <br>
+            <br>
             <p id="computerchoice-text"></p>
           </div>
           <div class="col-sm-5">
             <img class="img-fluid" src="assets/images/001_Rock_Paper_Scissors.png"></img>
           </div>
+
           <div class="col-sm-3">
+            <br>
             <p id="wins-text"></p>
             <p id="losses-text"></p>
             <p id="ties-text"></p>
@@ -38,12 +51,11 @@
         </div>
 
         <div class="row">
-          <div class="col-sm-12">
-            <footer>copyright</footer>
+          <div class="col-sm-12 footer fixed-bottom">
+          <p>copyright</p>
           </div>
         </div>
-      
-      </div>
+
     </div>
   </div>
 
@@ -94,7 +106,7 @@
 
           // Display the user and computer guesses, and wins/losses/ties.
           userChoiceText.textContent = "You chose: " + userGuess;
-          computerChoiceText.textContent = "The computer chose: " + computerGuess;
+          computerChoiceText.textContent = "Computer: " + computerGuess;
           winsText.textContent = "wins: " + wins;
           lossesText.textContent = "losses: " + losses;
           tiesText.textContent = "ties: " + ties;
